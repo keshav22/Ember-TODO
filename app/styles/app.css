@@ -1,0 +1,25 @@
+
+.pad20{
+    padding: 20px;
+}
+
+.todo-bar{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.horz-center
+{
+    display: flex;
+    justify-content: center;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.justify-space-between{
+    justify-content: space-between;
+}

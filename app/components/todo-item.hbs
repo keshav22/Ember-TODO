@@ -1,0 +1,16 @@
+<div>
+    {{@headerText}}
+    <div>
+        <br>
+        <Input @type="text" placeholder="First Name" @value={{this.listItem.firstName}}
+            @onChange={{this.modifyFirstName}}></Input>
+        <Input @type="text" placeholder="Last Name" @value={{this.listItem.lastName}}
+            @onChange={{this.modifyLastName}}></Input>
+        {{outlet}}
+        <br>
+    </div>
+    <div class="horz-center pad20 justify-space-between">
+        <Button @onClick={{this.save}}>Save</Button>
+        <Button @onClick={{this.saveAndBack}}>Save and Go back</Button>
+    </div>
+</div>
