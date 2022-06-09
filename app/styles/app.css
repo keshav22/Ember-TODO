@@ -23,3 +23,15 @@
 .justify-space-between{
     justify-content: space-between;
 }
+
+body{
+    background-color: #f1efef;
+}
+
+.main-application{
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
