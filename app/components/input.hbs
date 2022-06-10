@@ -1,6 +1,11 @@
-<input type={{@type}} 
+<label class={{@input-label-class}}>
+  {{@label}}
+  <input
+    class={{@input-class}}
+    type={{@type}}
     placeholder={{@placeholder}}
     value={{@value}}
     onInput={{this.onChange}}
-    />
-{{yield}}
+  />
+  {{yield}}
+</label>

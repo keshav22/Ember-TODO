@@ -35,3 +35,17 @@ body{
     margin-left: 200px;
     margin-right: 200px;
 }
+
+.input-label-diff-line{
+    display: table-caption;
+}
+
+.description{
+    border-radius: 8px;
+    min-width: 400px;
+    min-height: 300px;
+}
+
+.wordBreak{
+    word-break: break-all;
+}

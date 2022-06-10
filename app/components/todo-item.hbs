@@ -1,16 +1,41 @@
-<div>
+<div class="horz-center">
+  <div>
     {{@headerText}}
-    <div>
-        <br>
-        <Input @type="text" placeholder="First Name" @value={{this.listItem.firstName}}
-            @onChange={{this.modifyFirstName}}></Input>
-        <Input @type="text" placeholder="Last Name" @value={{this.listItem.lastName}}
-            @onChange={{this.modifyLastName}}></Input>
+    <div class="horz-center">
+      <div>
+        <br />
+        <Input
+          @input-label-class="input-label-diff-line"
+          @label="Todo header"
+          @type="text"
+          placeholder="ex. Work"
+          @value={{this.listItem.firstName}}
+          @onChange={{this.modifyFirstName}}
+        />
+        <br />
+        <Input
+          @input-label-class="input-label-diff-line"
+          @input-class="description wordBreak"
+          @label="Todo Description"
+          @type="text"
+          placeholder="ex. 1. Break down the jira"
+          @value={{this.listItem.lastName}}
+          @onChange={{this.modifyLastName}}
+        />
         {{outlet}}
-        <br>
+        <br />
+      </div>
     </div>
-    <div class="horz-center pad20 justify-space-between">
-        <Button @onClick={{this.save}}>Save</Button>
-        <Button @onClick={{this.saveAndBack}}>Save and Go back</Button>
+    <div class="pad20 justify-space-between">
+      <Button @onClick={{this.save}}>
+        Save
+      </Button>
+      <Button @onClick={{this.saveAndBack}}>
+        Save and Go back
+      </Button>
     </div>
+    <Button @onClick={{this.cancelTodoItem}}>
+      Cancel
+    </Button>
+  </div>
 </div>
