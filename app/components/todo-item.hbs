@@ -9,7 +9,7 @@
           @label="Todo header"
           @type="text"
           placeholder="ex. Work"
-          @value={{this.listItem.firstName}}
+          @value={{this.listItem.header}}
           @onChange={{this.modifyFirstName}}
         />
         <br />
@@ -19,7 +19,7 @@
           @label="Todo Description"
           @type="text"
           placeholder="ex. 1. Break down the jira"
-          @value={{this.listItem.lastName}}
+          @value={{this.listItem.description}}
           @onChange={{this.modifyLastName}}
         />
         {{outlet}}

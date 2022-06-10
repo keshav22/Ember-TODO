@@ -31,10 +31,10 @@
             {{#each this.getTodos as |item index|}}
             <tr>
                 <td>
-                    {{item.firstName}}
+                    {{item.header}}
                 </td>
                 <td class="wordBreak">
-                    {{item.lastName}}
+                    {{item.description}}
                 </td>
                 <td>
                     <Button @onClick={{fn this.modifyTodo index}}>Edit</Button>

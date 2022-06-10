@@ -24,17 +24,17 @@ export default class EditTodoController extends Controller {
   }
 
   @action save() {
-    let finalFirstName = this.changedFirstName || this.listItem.firstName;
-    let finalLastName = this.changedLastName || this.listItem.lastName;
-    this.todo.todos[this.index].firstName = finalFirstName;
-    this.todo.todos[this.index].lastName = finalLastName;
+    let finalFirstName = this.changedFirstName || this.listItem.header;
+    let finalLastName = this.changedLastName || this.listItem.description;
+    this.todo.todos[this.index].header = finalFirstName;
+    this.todo.todos[this.index].description = finalLastName;
   }
 
   @action saveAndBack() {
-    let finalFirstName = this.changedFirstName || this.listItem.firstName;
-    let finalLastName = this.changedLastName || this.listItem.lastName;
-    this.todo.todos[this.index].firstName = finalFirstName;
-    this.todo.todos[this.index].lastName = finalLastName;
+    let finalFirstName = this.changedFirstName || this.listItem.header;
+    let finalLastName = this.changedLastName || this.listItem.description;
+    this.todo.todos[this.index].header = finalFirstName;
+    this.todo.todos[this.index].description = finalLastName;
     history.back();
   }
 }

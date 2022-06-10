@@ -9,9 +9,9 @@
         <div>
             <br>
             {{#if this.index}}
-            <Input @type="text" placeholder="First Name" @value={{this.listItem.firstName}}
+            <Input @type="text" placeholder="First Name" @value={{this.listItem.header}}
                 @onChange={{this.modifyFirstName}}></Input>
-            <Input @type="text" placeholder="Last Name" @value={{this.listItem.lastName}}
+            <Input @type="text" placeholder="Last Name" @value={{this.listItem.description}}
                 @onChange={{this.modifyLastName}}></Input>
             {{/if}}
             {{outlet}}

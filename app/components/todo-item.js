@@ -23,7 +23,7 @@ export default class TodoItemComponent extends Component {
         if (this.args.index)
             return this.todo.todos[this.args.index];
 
-        return { firstName: "", lastName: "" }
+        return { header: "", description: "" }
     }
 
     get todoType() {
@@ -39,12 +39,12 @@ export default class TodoItemComponent extends Component {
     }
 
     @action actualSave(goback = false) {
-        let finalFirstName = this.changedFirstName || this.listItem.firstName;
-        let finalLastName = this.changedLastName || this.listItem.lastName;
+        let finalFirstName = this.changedFirstName || this.listItem.header;
+        let finalLastName = this.changedLastName || this.listItem.description;
 
         if (this.todoType == "ADD") {
             if (finalFirstName && finalLastName)
-                this.todo.todos.push({ firstName: finalFirstName, lastName: finalLastName });
+                this.todo.todos.push({ header: finalFirstName, description: finalLastName });
             else {
                 alert("Please enter values in both field");
                 return;
@@ -52,8 +52,8 @@ export default class TodoItemComponent extends Component {
 
         }
         else if (this.todoType == "EDIT") {
-            this.todo.todos[this.args.index].firstName = finalFirstName;
-            this.todo.todos[this.args.index].lastName = finalLastName;
+            this.todo.todos[this.args.index].header = finalFirstName;
+            this.todo.todos[this.args.index].description = finalLastName;
         }
 
         if (goback)
