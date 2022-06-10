@@ -1,0 +1,51 @@
+
+.pad20{
+    padding: 20px;
+}
+
+.todo-bar{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.horz-center
+{
+    display: flex;
+    justify-content: center;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.justify-space-between{
+    justify-content: space-between;
+}
+
+body{
+    background-color: #f1efef;
+}
+
+.main-application{
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.input-label-diff-line{
+    display: table-caption;
+}
+
+.description{
+    border-radius: 8px;
+    min-width: 400px;
+    min-height: 300px;
+}
+
+.wordBreak{
+    word-break: break-all;
+}

@@ -1,0 +1,56 @@
+{{page-title "TodoList"}}
+<div class="pad20">
+    <div class="todo-bar">
+        <div>
+            Todo List
+        </div>
+        
+        <div>
+            <Button><LinkTo @route="add-todo">+ Add Todo</LinkTo></Button>
+        </div>
+    </div>
+    {{#if this.getTodos}}
+    <table class="table ">
+        <thead>
+            <tr>
+                <th>
+                    Header
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    
+                </th>
+                <th>
+                    
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each this.getTodos as |item index|}}
+            <tr>
+                <td>
+                    {{item.header}}
+                </td>
+                <td class="wordBreak">
+                    {{item.description}}
+                </td>
+                <td>
+                    <Button @onClick={{fn this.modifyTodo index}}>Edit</Button>
+                </td>
+                <td>
+                    <Button @onClick={{fn this.deleteTodo index}}>Delete</Button>
+                </td>
+            </tr>
+
+
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <hi>blank</hi>
+    {{/if}}
+</div>
+
+{{outlet}}

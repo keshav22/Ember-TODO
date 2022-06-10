@@ -1,7 +1,14 @@
-{{page-title "KeshavTodoApp"}}
-
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="navbar-nav">
+            <div class="horz-center" style="padding-left:10px">
+                <LinkTo @route="home">Home</LinkTo>
+                <span style="width:30px;"></span>
+                <LinkTo @route="todo-list">Todo</LinkTo>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="main-application">
+    {{outlet}}
+</div>
