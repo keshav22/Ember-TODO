@@ -19,7 +19,6 @@ export default class TodoItemComponent extends Component {
     };
 
     get listItem() {
-        alert
         if (this.args.index)
             return this.todo.todos[this.args.index];
 
