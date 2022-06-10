@@ -10,18 +10,9 @@ module('Integration | Component | input', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<Input />`);
+    await render(hbs`<Input @type="text" @value="Test"/>`);
 
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Input>
-        template block text
-      </Input>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert.dom("input[type='text']").hasValue("Test");
   });
 
   
