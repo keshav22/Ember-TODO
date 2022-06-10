@@ -7,15 +7,15 @@ export default class TodoItemComponent extends Component {
     @service todo;
     @service router;
 
-    changedFirstName = '';
-    changedLastName = '';
+    changedHeader = '';
+    changedDescription = '';
 
     @action modifyFirstName(val) {
-        this.changedFirstName = val;
+        this.changedHeader = val;
     };
 
     @action modifyLastName(val) {
-        this.changedLastName = val;
+        this.changedDescription = val;
     };
 
     get listItem() {
@@ -39,12 +39,12 @@ export default class TodoItemComponent extends Component {
     }
 
     @action actualSave(goback = false) {
-        let finalFirstName = this.changedFirstName || this.listItem.header;
-        let finalLastName = this.changedLastName || this.listItem.description;
+        let finalHeader = this.changedHeader || this.listItem.header;
+        let finalDescription = this.changedDescription || this.listItem.description;
 
         if (this.todoType == "ADD") {
-            if (finalFirstName && finalLastName)
-                this.todo.todos.push({ header: finalFirstName, description: finalLastName });
+            if (finalHeader && finalDescription)
+                this.todo.addTodo(finalHeader,finalDescription);
             else {
                 alert("Please enter values in both field");
                 return;
@@ -52,8 +52,7 @@ export default class TodoItemComponent extends Component {
 
         }
         else if (this.todoType == "EDIT") {
-            this.todo.todos[this.args.index].header = finalFirstName;
-            this.todo.todos[this.args.index].description = finalLastName;
+            this.todo.editTodosObj(this.args.index, finalHeader, finalDescription);
         }
 
         if (goback)

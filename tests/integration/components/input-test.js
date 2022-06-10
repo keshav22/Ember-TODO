@@ -23,4 +23,6 @@ module('Integration | Component | input', function (hooks) {
 
     assert.dom(this.element).hasText('template block text');
   });
+
+  
 });
